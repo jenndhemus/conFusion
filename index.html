@@ -23,8 +23,8 @@
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                   data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -85,9 +85,8 @@
         <!--Modal-->
 
  
-          <!---->
 
-        <div  id = "loginModal"  class = "modal fate"  data-backdrop="false" >
+        <div  id = "loginModal"  class = "modal fade in"  data-backdrop="false" >
           <div class = "modal-dialog">
             <!--modal content-->
             <div class = "modal-content">
@@ -147,7 +146,8 @@
                     <p style="padding:40px;"></p>
                   <!--Add tool-tip to button-->
 
-                      <a href="#reserve-table" class="btn btn-warning btn-block btn-active" role="button" data-toggle= "tooltip" title = "Or call us At +852 12345678" data-placement= "bottom" >Reserve Table</a>
+                      <a href="#reserve-table" class="btn btn-warning btn-block btn-active" 
+                      role="button" data-toggle = "modal" data-target = "#reserve-table">Reserve Table</a>
 
 
                        
@@ -157,7 +157,7 @@
     </header>
 
     <!--Carrousel -->
-    <div class = "container container-items">
+    <div class = "container container-items"> <!--the end of this div-->
 
       <div class = "row row-content">
         <div class= "col-xs-12">
@@ -280,9 +280,23 @@
                 <h3 align=center>This Month's Promotions</h3>
             </div>
             <div class ="col-xs-12 col-sm-9">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-                <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>            </div>
+              <div class="media">
+                <div class="media-right media-middle">
+                  <a href="#">
+                    <img class="media-object img-thumbnail"
+                    src="img/buffet.png" alt="buffet">
+                  </a>
+                </div>
+                <div class="media-body">
+
+                  <h2 class="media-heading">Weekend Grand Buffet
+                     <span class = "label label-danger label-xs">NEW</span>
+                  </h2>
+                    <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p> 
+                </div>           
+                </div>
+              </div>
         </div>
 
         <div class ="row-content">
@@ -314,7 +328,7 @@
 
         <!--Row containing Reserve table info-->
 
-      <div class = "row-content" id= "reserve-table"  data-target="#reserve-table">
+      <div class = "row-content">
            
             <!--Container for Table reservation title-->
              <div class ="col-xs-12 col-sm-2 ">
@@ -335,8 +349,8 @@
               </div>
               <div  class = "row">
                <label class ="col-xs-12" align = "right">Date and Time</label>
-           </div>
-         </div>
+              </div>
+            </div>
 
           <!--END colum  for  titles-->
 
@@ -356,60 +370,235 @@
                        <label class="radio-inline"><input type="radio" name="four">4</label>
                        <label class="radio-inline"><input type="radio" name="two">5</label>
                        <label class="radio-inline"><input type="radio" name="two">6</label>
-
                 </form>
                 <p style="padding:20px;"></p>
 
               </div>
-              <div class = "row col-xs-12 col-sm-4"  align ="left">
-
-
-
-            <div class="form-group has-feedback ">
-                <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
-                <input type="text" class="form-control" placeholder ="Date" >
-            </div>
-          </div>
+                <div class = "row col-xs-12 col-sm-4"  align ="left">
+                  <div class="form-group has-feedback ">
+                      <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                      <input type="text" class="form-control" placeholder ="Date" >
+                  </div>
+                </div>
 
         
-             <div class = "row col-xs-12 col-sm-4 col-sm-offset-1"  align ="right">
-          <div class="form-group has-feedback ">
-                <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></span>
-                <input type="text" class="form-control" placeholder="Time" >
-          </div>
-        </div>
+                <div class = "row col-xs-12 col-sm-4 col-sm-offset-1"  align ="right">
+                  <div class="form-group has-feedback ">
+                    <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></span>
+                    <input type="text" class="form-control" placeholder="Time" >
+                  </div>
+               </div>
         
 
         
         
-            <p style="padding:20px;"></p>
-           <div class ="row col-xs-12 col-sm-7">
-            <button type="button" class="btn btn-primary" align ="left">Reserve</button>
+               <p style="padding:20px;"></p>
+               <div class ="row col-xs-12 col-sm-7">
+                <button type="button" class="btn btn-primary" align ="left">Reserve</button>
+               </div>
+               <p style = "padding:20px;"></p>
 
-          </div>
-          <p style="padding:20px;"></p>
+                 <div class = "row-col-sm-12">
+
+                  <div class="alert alert-warning alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      Warning:: Please<strong> <a  href ="tel:799879898" >call</a></strong> us before reserve more than six guess.
+                 </div>
+                </div>
 
 
-          <div class = "row-col-sm-12">
+         
 
-            <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                Warning:: Please<strong> <a  href ="#">call</a></stong> us before reserve more than six guess.
-          </div>
-          </div>
+          
+             </div> <!--END colum for FORM to hold radio buttons and Date picker alert and reserve button-->
 
-            </div>
-                <!--END colum for FORM to hold radio buttons and Date picker alert and reserve button-->
+
+
+           </div>
+
+
+
 
        
-      </div>
+
+
+
+         </div> <!--end of main container-->
+
+
+         <!--start of footer-->
+
+            <footer class ="row-footer">
+        <div class ="container">
+            <div class = "row">           
+                        <div class ="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
+                            <h5>Links</h5>
+                            <ul class ="list-unstyled">
+                                <li><a href="#"> Home</a></li>
+                                <li><a href="aboutus.html">About</a></li>
+                                <li><a href="#">Menu</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class = "col-xs-6 col-sm-5">
+                            <h5>Our Address</h5>
+                            <address>
+                          121, Clear Water Bay Road<br>
+                          Clear Water Bay, Kowloon<br>
+                          HONG KONG<br>
+                          <i class="fa fa-phone"></i>: +852 1234 5678<br>
+                              <i class="fa fa-fax"></i>: +852 8765 4321<br>
+                              <i class="fa fa-envelope"></i>: 
+                                 <a href="mailto:confusion@food.net">confusion@food.net</a>
+                       </address>
+                        </div>
+                        <div class ="col-xs-12 col-sm-4">
+                                <div style="padding: 40px 10px;">
+                                  <div class="nav navbar-nav" style="padding: 40px 10px;">
+                                      <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                                      <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                                      <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                                      <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                                      <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                                      <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class ="col xs-12 col-sm-12">
+                            <p style="padding:10px;"></p>
+                            <p align=center>© Copyright 2015 Ristorante Con Fusion</p>
+                        </div>
+                </div>
+            </div>
+        
+ </footer>
+
+
+ 
+
+       
+
+        <div  id = "reserve-table"  class = "modal fade in"  data-backdrop="false" >
+          <div class = "modal-dialog">
+            <!--modal content-->
+            <div class = "modal-content">
+              <!--Modal Header-->
+              <div class= "modal-header">
+                <button type = "button" class = "close" data-dismiss = "modal" data-backdrop="false">&times;</button>
+                <h4 class = "modal-title"><strong>Reserve Table</strong></h4>
+              </div>
+              <!---Modal Body-->
+              <div class = "modal-body">
+                <div class = "row">
+                    <div class =" container col-xs-12 col-sm-2 text-center">
+
+                         <div class = "row">
+                            <label class = "col-xs-12" align = "right">Number of Guess</label>
+                            <p style="padding:22px;"></p>
+                         </div>
+                          <div class = "row">
+                            <label class = "col-xs-12" align = "right">Section</label>
+                            <p style="padding:22px;"></p>
+                         </div>
+                         <div  class = "row">
+                            <label class ="col-xs-12" align = "right">Date and Time</label>
+                         </div>
+                  </div>
+            
+
+                 <div class ="container col-xs-12 col-sm-8 ">
+                <form class ="col-xs-12 col-sm-12" >
+                    
+                       <label class="radio-inline"> <input type="radio" name="one">1</label>
+                       <label class="radio-inline"><input type="radio" name="two">2</label>
+                       <label class="radio-inline"><input type="radio" name="three">3</label>
+                       <label class="radio-inline"><input type="radio" name="four">4</label>
+                       <label class="radio-inline"><input type="radio" name="two">5</label>
+                       <label class="radio-inline"><input type="radio" name="two">6</label>
+                </form>
+                <p style="padding:20px;"></p>
+
+
+              <div class = "row col-xs-12 col-sm-12">
+                
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-success active">
+                  <input type="radio" name="options" id="Non-Smoking" autocomplete="off" checked>Non-Smoking
+                </label>
+                <label class="btn btn-danger">
+                  <input type="radio" name="options" id="Smooking" autocomplete="off">Smoking
+                </label>
+              </div>
+
+              </div>
+
+              <p style = "padding: 25px;"></p>
+
+
+                <div class = "row">
+
+                <div class = "col-xs-12 col-sm-6">
+                  <div class="form-group has-feedback ">
+                      <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                      <input type="text" class="form-control" placeholder ="Date" >
+                  </div>
+                </div>
+
+                <div class = "col-xs-12 col-sm-6">
+                  <div class="form-group has-feedback ">
+                    <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></span>
+                    <input type="text" class="form-control" placeholder="Time" >
+                  </div>
+               </div>
+             </div>
+
+             <!--reserve table button-->
+
+               <div class ="row col-xs-12 col-sm-7">
+                <button type="button" class="btn btn-primary" align ="left">Reserve</button>
+                <button type="button" class="btn btn-default" align ="left"
+                  data-dismiss = "modal">Cancel</button>
+
+
+               </div>
+               <p style = "padding:20px;"></p>
+        
+
+            </div> <!--end of row contianer of body-->
+
+
+          
+             </div> <!--END colum for FORM to hold radio buttons and Date picker alert and reserve button-->
+             <!--dismiss alert-->
+
+                  <div class="alert alert-warning alert-dismissible" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      Warning:: Please<strong> <a  href ="tel:799879898" >call</a></strong> us before reserve more than six guess.
+                 </div>
+                </div>
+
+
+
+           </div>
+
+
+        
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      
    
              
                     
 
                 
         
-      </div>
+  
                 
             
 
@@ -422,50 +611,7 @@
 
     
 
-    <footer class ="row-footer">
-        <div class ="container">
-            <div class = "row">           
-                <div class ="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
-                            <h5>Links</h5>
-                            <ul class ="list-unstyled">
-                                <li><a href="#"> Home</a></li>
-                                <li><a href="aboutus.html">About</a></li>
-                                <li><a href="#">Menu</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                        <div class = "col-xs-6 col-sm-5">
-                            <h5>Our Address</h5>
-                            <address>
-        		              121, Clear Water Bay Road<br>
-        		              Clear Water Bay, Kowloon<br>
-        		              HONG KONG<br>
-        		              <i class="fa fa-phone"></i>: +852 1234 5678<br>
-                              <i class="fa fa-fax"></i>: +852 8765 4321<br>
-                              <i class="fa fa-envelope"></i>: 
-                                 <a href="mailto:confusion@food.net">confusion@food.net</a>
-        		           </address>
-                        </div>
-                        <div class ="col-xs-12 col-sm-4">
-                            <div style="padding: 40px 10px;">
-                           <div class="nav navbar-nav" style="padding: 40px 10px;">
-                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
-                    </div>
-                            </div>
-                        </div>
-                        <div class ="col xs-12 col-sm-12">
-                            <p style="padding:10px;"></p>
-                            <p align=center>© Copyright 2015 Ristorante Con Fusion</p>
-                        </div>
-                </div>
-            </div>
-        </div>
- </footer>
+ 
 <script
     src= "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
 </script>
